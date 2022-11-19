@@ -154,7 +154,7 @@ contract MiTokenParaVenta is ERC20, AccessControl {
     {
         uint256 ts = totalSupply() / 10**18;
         uint256 price = ts**2 - 2 * ts + 1000;
-        uint256 _mtpvAmount = _usdcAmount / price;
+        uint256 _mtpvAmount = (_usdcAmount * 10**18) / price;
         return _mtpvAmount;
     }
 }

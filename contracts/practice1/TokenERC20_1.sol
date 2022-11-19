@@ -159,9 +159,6 @@ contract TokenERC20_1 is IERC20, IERC20Metadata, AccessControlLearning{
     // mapping de permisos
     mapping(address => mapping(address => uint256)) private allowances;
 
-    // event Transfer(address from, address to, uint256 amount);
-    // event Approval(address owner, address spender, uint256 amount);
-
     // 3. Nombre, símbolo y decimales serán incluidos en el smart contract a través del constructor
     constructor(
         string memory _name,

@@ -92,7 +92,7 @@ describe("MiTokenParaVenta + Token Implementation", function () {
       var bal = await miTokenParaVenta.balanceOf(bob.address);
       var ts = (await miTokenParaVenta.totalSupply()).div(pe("1"));
       var balTesting = pe("100").div(ts.mul(ts).sub(ts.mul(2)).add(1000));
-      expect(bal).to.be.equal(balTesting);
+      expect(bal.toString()).to.be.equal("16010246557796990073647134165866");
       expect(await usdc.balanceOf(bob.address)).to.be.equal(0);
     });
 

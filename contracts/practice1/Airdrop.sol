@@ -267,9 +267,7 @@ contract Airdrop is AccessControl {
         // el mod % empieza en cero
         // multiplicar por 10**18 por los decimales
 
-        uint256 random = 0;
-        random = (uint256(keccak256(abi.encodePacked(msg.sender, address(this), block.timestamp))) % 997) + 2;
-
+        uint256 random = (uint256(keccak256(abi.encodePacked(msg.sender, address(this), block.timestamp))) % 1000) + 1;
         return random * 10**18;
     }
 }
